@@ -1,0 +1,36 @@
+.when {
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    counter-reset: my-counter;
+  }
+
+  &Item {
+    grid-column: 3 span;
+    padding: 30px;
+    background-color: var(--bg);
+    counter-increment: my-counter;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: counter(my-counter);
+      position: absolute;
+      bottom: -70px;
+      right: 5px;
+      font-family: var(--second-family);
+      font-weight: 900;
+      font-size: 140px;
+      color: #1161b9;
+      opacity: .1;
+    }
+
+    &Title {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+
+  }
+}

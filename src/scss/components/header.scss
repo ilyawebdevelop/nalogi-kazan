@@ -1,0 +1,101 @@
+// Header
+.header {
+  &T {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: var(--bg);
+
+    &W {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 30px;
+    }
+
+    &Nav {
+      ul {
+        display: flex;
+        column-gap: 50px;
+
+        li {
+          a {
+            &:hover {
+              color: var(--blue);
+            }
+          }
+        }
+      }
+    }
+
+    &R {
+      display: flex;
+      column-gap: 50px;
+      align-items: center;
+    }
+  }
+
+  &C {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--outline);
+    &W {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+    &R {
+      display: flex;
+      column-gap: 30px;
+      align-items: center;
+    }
+  }
+  &Phone {
+    font-size: 20px;
+    font-weight: 500;
+    background: url('@img/icons/phone.svg') no-repeat left center / 20px;
+    padding-left: 35px;
+    &:hover {
+      color: var(--blue);
+    }
+  }
+  &Contacts {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    img {
+      width: 20px;
+    }
+  }
+  &Work {
+    color: #73737b;
+    margin-top: 2px;
+  }
+
+  &B {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    &Nav {
+      ul {
+        display: flex;
+        column-gap: 40px;
+
+        li {
+          a {
+            &:hover {
+              color: var(--blue);
+            }
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    &:hover {
+      opacity: .85;
+    }
+    img {
+      width: 175px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.about {
+  &W {
+    padding: 70px;
+    background-color: var(--bg);
+  }
+
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 50px;
+
+    .col {
+      grid-column: 6 span;
+    }
+  }
+
+  &Adv {
+    display: flex;
+    column-gap: 30px;
+    margin-bottom: 30px;
+
+    &Item {
+      &:last-child {
+        .aboutAdvItemDescr {
+          max-width: 172px;
+        }
+      }
+      &Count {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: 64px;
+        letter-spacing: 0.05em;
+        color: #1161b9;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

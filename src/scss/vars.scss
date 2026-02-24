@@ -1,0 +1,32 @@
+// Font-weights
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+$black: 900;
+
+// Containers
+:root {
+  --content-width: 1820px;
+  --content-fluid-width: 1700px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+  --font-family: "Manrope", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --outline: #e1e1e8;
+  --main-color: #1f1f20;
+  --bg: #f7f7fb;
+  --success: #27c340;
+  --error: #e02828;
+  --yellow: #ffc529;
+  --disabled: #c5cfdc;
+  --tetriary: #abc4e4;
+  --gray: #8b8b8b;
+  --gray2: #73737b;
+  --blue: #1161b9;
+  --dark-blue: #081943;
+
+}

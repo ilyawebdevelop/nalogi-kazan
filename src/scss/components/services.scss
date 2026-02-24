@@ -1,0 +1,62 @@
+.services {
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    .servicesItem {
+      grid-column: 4 span;
+
+
+    }
+  }
+
+  &Item {
+    padding: 20px;
+    border: 1px solid #e1e1e8;
+    transition: border-color .2s linear;
+
+    &:hover {
+      border-color: var(--blue);
+    }
+
+    &Title {
+      margin-bottom: 15px;
+      display: block;
+      width: fit-content;
+    }
+
+    &Head {
+      display: flex;
+      column-gap: 30px;
+      align-items: flex-start;
+      padding-bottom: 30px;
+
+    }
+
+    &Img {
+      width: 100px;
+    }
+
+    &Links {
+      padding-top: 30px;
+      border-top: 1px solid var(--outline);
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+
+        a {
+          padding-left: 31px;
+          display: flex;
+          background: url('@img/icons/arrow-list.svg') no-repeat left top / 16px;
+
+          &:hover {
+            color: var(--blue);
+          }
+        }
+      }
+    }
+  }
+}
