@@ -6,8 +6,6 @@
 
     .servicesItem {
       grid-column: 4 span;
-
-
     }
   }
 
@@ -56,6 +54,20 @@
             color: var(--blue);
           }
         }
+      }
+    }
+    &--row {
+      display: flex;
+      .servicesItemHead {
+        flex-direction: row-reverse;
+        max-width: 550px;
+        width: 100%;
+      }
+      .servicesItemLinks {
+        border-top: 0;
+        border-left: 1px solid var(--outline);
+        padding-left: 50px;
+        margin-left: 50px;
       }
     }
   }

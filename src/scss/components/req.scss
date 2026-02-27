@@ -1,0 +1,70 @@
+.req {
+  .sectHead {
+    display: flex;
+    column-gap: 130px;
+    margin-bottom: 50px;
+
+    @media(max-width: 991px) {
+      column-gap: 50px;
+      margin-bottom: 30px;
+    }
+
+    @media(max-width: 575px) {
+      margin-bottom: 20px;
+      column-gap: 0;
+      row-gap: 20px;
+      flex-direction: column;
+    }
+  }
+
+  &Content {
+
+    ul {
+      li {
+        padding-left: 20px;
+        padding-right: 20px;
+        line-height: 140%;
+        display: flex;
+        column-gap: 40px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-bottom: 1px solid #e1e1e8;
+        transition: background-color .2s linear;
+
+        &:hover {
+          background-color: var(--bg);
+          .reqItemBtn{
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        span {
+          &:nth-child(1) {
+            width: 400px;
+            flex-shrink: 0;
+            color: #73737b;
+          }
+
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.reqItemBtn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s linear, visibility .2s linear;
+  &:hover {
+    opacity: .85;
+  }
+}

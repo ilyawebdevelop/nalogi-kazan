@@ -1,0 +1,34 @@
+.contacts {
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+    margin-bottom: 50px;
+
+    .col {
+      grid-column: 3 span;
+    }
+  }
+}
+
+.copyBtnW {
+  position: relative;
+  width: fit-content;
+
+  @media(max-width: 575px) {
+    margin-right: 0;
+    margin-left: unset;
+  }
+}
+
+.copyText {
+  display: none;
+  position: absolute;
+  right: calc(100% + 5px);
+  top: 50%;
+  transform: translateY(-50%);
+
+  &.active {
+    display: block;
+  }
+}

@@ -2,22 +2,51 @@
   background-color: var(--bg);
   border-bottom-left-radius: 60px;
   border-bottom-right-radius: 60px;
+
   &Grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 50px;
     margin-bottom: 50px;
+
     .col {
       grid-column: 6 span;
     }
   }
+
   &Title {
     text-transform: uppercase;
   }
+
   .arrow-round {
     margin-bottom: 30px;
   }
+
   &Image {
     border-radius: 25px;
+  }
+}
+
+.about-intro-wrap {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 55px;
+}
+
+.aboutIntro {
+  padding-top: 30px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .introGrid {
+    margin-top: 50px;
+  }
+
+  .arrow-round {
+    margin-bottom: 30px;
   }
 }

@@ -1,0 +1,22 @@
+.audit {
+  &W {
+    border-radius: 25px;
+    padding: 70px;
+    background: #f7f7fb;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 50px;
+    .col {
+      grid-column: 6 span;
+    }
+  }
+  &L {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &Icon {
+    width: 160px;
+  }
+}

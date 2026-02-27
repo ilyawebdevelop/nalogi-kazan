@@ -1,0 +1,56 @@
+<section class="sect sectPage">
+  <div class="container">
+
+    <div class="newsFilter">
+      <div class="col">
+        <div class="searchW">
+          <input type="search" class="formInput border-outline formInput--search" placeholder="Поиск по статьям">
+        </div>
+      </div>
+      <div class="col">
+        <select name="tematika" id="tematika" class="formSelect border-outline">
+          <option value="1">Нормативные документы</option>
+          <option value="2">ИП</option>
+          <option value="3">Налоги</option>
+          <option value="4">Финансы</option>
+          <option value="5">Право</option>
+          <option value="6">Налоговые споры</option>
+          <option value="7">Разное</option>
+        </select>
+      </div>
+      <div class="col">
+        <select name="year" id="year" class="formSelect border-outline">
+          <option value="1">Год</option>
+          <option value="2">2026</option>
+          <option value="3">2025</option>
+          <option value="4">2024</option>
+          <option value="5">2023</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="newsGrid">
+      @@include('../news/card-1.html',{})
+      @@include('../news/card-2.html',{})
+      @@include('../news/card-3.html',{})
+      @@include('../news/card-4.html',{})
+      @@include('../news/card-4.html',{})
+      @@include('../news/card-1.html',{})
+      @@include('../news/card-2.html',{})
+      @@include('../news/card-3.html',{})
+      @@include('../news/card-1.html',{})
+      @@include('../news/card-2.html',{})
+      @@include('../news/card-3.html',{})
+      @@include('../news/card-4.html',{})
+      @@include('../news/card-4.html',{})
+      @@include('../news/card-1.html',{})
+      @@include('../news/card-2.html',{})
+      @@include('../news/card-3.html',{})
+    </div>
+
+    <button class="button button--blue w-100 loadmore">
+      Показать еще
+    </button>
+
+  </div>
+</section>

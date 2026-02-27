@@ -1,0 +1,49 @@
+.prices {
+  &Head {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 40px;
+    padding: 20px;
+    background: #f7f7fb;
+    border-radius: 15px;
+
+
+    .col {
+      grid-column: 6 span;
+    }
+
+    .col:has(.col-inner) {
+
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 40px;
+
+      .col-inner {
+        grid-column: 6 span;
+      }
+    }
+  }
+
+  &Row {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 40px;
+    border-bottom: 1px solid #e1e1e8;
+
+    .col {
+      grid-column: 6 span;
+    }
+
+    .col:has(.col-inner) {
+
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 40px;
+
+      .col-inner {
+        grid-column: 6 span;
+      }
+    }
+  }
+}

@@ -1,23 +1,45 @@
 // modal
 .modal {
   display: none;
-  &-header {
-    padding: 45px;
-    padding-bottom: 25px;
-    border-bottom: none;
+  border-radius: 25px;
+  padding: 60px;
+  width: 800px;
+  background-color: #f7f7fb;
+
+  .h2 {
+    font-size: 44px;
+    line-height: normal;
+    margin-bottom: 30px;
   }
 
-  &-body {
-    padding: 45px;
-    padding-top: 0;
+  &Descr {
+    line-height: 150%;
+    margin-bottom: 30px;
   }
 
-  &-title {
-    font-size: 23px;
-  }
-  .btn-close {
-    background: none;
-    opacity: 1;
+  .agreement {
+
+    .rect {
+      background-color: #fff;
+      border: 1px solid var(--outline);
+    }
+
+    input {
+      &:checked {
+        &+label {
+          .rect {
+            background: var(--dark-blue) url('@img/icons/check-white.svg') no-repeat center center / 11px;
+            border-color: var(--dark-blue);
+          }
+        }
+      }
+    }
   }
 }
 
+.fancybox__backdrop {
+  background-color: rgba($color: #000000, $alpha: .6);
+}
+.f-button.is-close-btn {
+  border-radius: 50%;
+}

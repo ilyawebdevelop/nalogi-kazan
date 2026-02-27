@@ -1,0 +1,42 @@
+.accordion {
+  h3 {
+    padding: 30px;
+    border-radius: 25px;
+    background-color: var(--bg);
+    margin-top: 10px;
+    transition: all .2s linear;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: normal;
+    column-gap: 20px;
+    &.ui-accordion-header-active {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+.ui-accordion-content {
+  padding: 30px;
+  padding-top: 0;
+  background-color: var(--bg);
+  &.ui-accordion-content-active {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+}
+.ui-accordion-header-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e1e1e8 url('@img/icons/plus.svg') no-repeat center center / 18px;
+  transition: background .2s linear;
+  flex-shrink: 0;
+}
+.ui-accordion-header-active .ui-accordion-header-icon {
+  background: #1161b9 url('@img/icons/minus.svg') no-repeat center center / 18px;
+}

@@ -1,6 +1,6 @@
 .aioseo-breadcrumbs {
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,8 +15,9 @@
   -webkit-transition: color 0.2s linear;
   -o-transition: color 0.2s linear;
   transition: color 0.2s linear;
+  color: #000;
 }
 
 .aioseo-breadcrumbs a:hover {
-  color: #000;
+  color: var(--blue);
 }

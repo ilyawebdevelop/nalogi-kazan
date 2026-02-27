@@ -2,13 +2,45 @@
   ul {
     display: flex;
     column-gap: 10px;
+
     li {
       a {
         &:hover {
           opacity: .85;
         }
+
         img {
           width: 32px;
+        }
+      }
+    }
+  }
+}
+
+.articleShare {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+
+    li {
+      grid-column: 4 span;
+
+      a {
+        border: 1px solid var(--outline);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        transition: background-color .2s linear;
+        &:hover {
+          background-color: #2aabee;
+        }
+
+        img {
+          width: 44px;
         }
       }
     }

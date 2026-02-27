@@ -1,4 +1,111 @@
 // Footer
 .footer {
+  background-color: var(--dark-blue);
+  margin-top: -50px;
 
+  &T {
+    padding-top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba($color: #fff, $alpha: .1);
+  }
+
+  &C {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba($color: #fff, $alpha: .1);
+    display: flex;
+    justify-content: space-between;
+
+    .col {
+      &.w-200 {
+        width: 200px;
+      }
+
+      &.w-250 {
+        width: 250px;
+      }
+
+      &.w-300 {
+        width: 300px;
+      }
+
+    }
+  }
+
+  &B {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+  }
+
+  &Nav {
+    &Title {
+      text-transform: uppercase;
+      color: rgba($color: #fff, $alpha: .5);
+      margin-bottom: 30px;
+    }
+
+    ul {
+      li {
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        a {
+          transition: text-decoration-color .2s linear;
+          color: #fff;
+          text-decoration-color: transparent !important;
+          text-decoration: underline;
+          text-underline-offset: 5px;
+          text-decoration-thickness: 1px;
+
+          &:hover {
+            text-decoration-color: #fff !important;
+          }
+        }
+      }
+    }
+
+    &--pt {
+      padding-top: 55px;
+    }
+  }
+
+  .logo {
+    &:hover {
+      opacity: .85;
+    }
+    img {
+      width: 175px;
+    }
+  }
+
+  a.color-white {
+    transition: text-decoration-color .2s linear;
+    color: #fff;
+    text-decoration-color: transparent !important;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-thickness: 1px;
+
+    &:hover {
+      text-decoration-color: #fff !important;
+    }
+  }
+}
+
+.develop {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+
+  &:hover {
+    opacity: .85;
+  }
 }

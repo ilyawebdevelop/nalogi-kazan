@@ -1,0 +1,48 @@
+.order {
+
+  .h2 {
+    color: #fff;
+    margin-bottom: 30px;
+  }
+
+  &W {
+    background: #1161b9 url('@img/order/order-bg.png') no-repeat left top / contain;
+    padding: 60px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    position: relative;
+
+    .col {
+      grid-column: 6 span;
+    }
+  }
+
+  &Bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .input-name {
+    color: #fff;
+  }
+  .agreement {
+    color: #fff;
+    .rect {
+      background-color: #fff;
+    }
+    input {
+      &:checked {
+        &+label {
+          .rect {
+            background: var(--dark-blue) url('@img/icons/check-white.svg') no-repeat center center / 11px;
+          }
+        }
+      }
+    }
+  }
+}

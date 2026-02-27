@@ -1,0 +1,97 @@
+.team {
+  &W {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &ThumbSlider {
+    width: 426px;
+    flex-shrink: 0;
+    max-height: 500px;
+    .swiper-slide {
+      padding: 15px 20px;
+      font-weight: 600;
+      border-radius: 10px;
+      height: fit-content;
+      background-color: #f7f7fb;
+      transition: background-color .2s linear, color .2s linear;
+      cursor: pointer;
+      &:hover {
+        background-color: var(--blue);
+        color: #fff;
+      }
+      &.swiper-slide-thumb-active {
+        background-color: var(--blue);
+        color: #fff;
+      }
+    }
+  }
+
+  &Slider {
+    width: 100%;
+  }
+
+  &Slide {
+    display: flex;
+    column-gap: 30px;
+
+    &Img {
+      width: 370px;
+      height: fit-content;
+      object-fit: contain;
+      border-radius: 15px;
+      flex-shrink: 0;
+    }
+
+    &Title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    &Work {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f2f2f6;
+      width: 100%;
+    }
+
+    &Content {
+      width: 100%;
+    }
+
+    &Item {
+      display: flex;
+      column-gap: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #f2f2f6;
+      }
+
+      &Name {
+        min-width: 130px;
+      }
+
+      ul {
+        li {
+          display: flex;
+          column-gap: 15px;
+          &:not(:last-child){
+            margin-bottom: 10px;
+          }
+
+          &::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background-color: var(--blue);
+            flex-shrink: 0;
+            border-radius: 50%;
+            margin-top: 7px;
+          }
+        }
+      }
+    }
+  }
+}

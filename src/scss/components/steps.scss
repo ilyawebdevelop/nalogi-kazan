@@ -1,0 +1,43 @@
+.steps {
+  &Grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    counter-reset: my-counter;
+  }
+
+  &Item {
+    border-radius: 25px;
+    padding: 30px 90px 30px 30px;
+    background-color: var(--bg);
+    grid-column: 4 span;
+    counter-increment: my-counter;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: counter(my-counter);
+      position: absolute;
+      bottom: -70px;
+      right: 5px;
+      font-family: var(--second-family);
+      font-weight: 900;
+      font-size: 140px;
+      color: #1161b9;
+      opacity: .1;
+    }
+
+    &--lg {
+      grid-column: 8 span;
+    } 
+    &W {
+      display: flex;
+      align-items: center;
+      column-gap: 50px;
+    }
+    .button {
+      height: fit-content;
+      flex-shrink: 0;
+    }
+  }
+}
