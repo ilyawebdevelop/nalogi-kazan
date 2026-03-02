@@ -4,17 +4,29 @@
   border-radius: 25px;
   padding: 60px;
   width: 800px;
+  color: var(--main-color);
   background-color: #f7f7fb;
+  @media(max-width: 991px){
+    padding: 30px 20px;
+    border-radius: 16px;
+  }
 
   .h2 {
     font-size: 44px;
     line-height: normal;
     margin-bottom: 30px;
+    @media(max-width: 1199px){
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
   }
 
   &Descr {
     line-height: 150%;
     margin-bottom: 30px;
+    @media(max-width: 1199px){
+      margin-bottom: 20px;
+    }
   }
 
   .agreement {

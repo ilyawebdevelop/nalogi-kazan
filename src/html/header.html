@@ -3,33 +3,90 @@
   <div class="headerT">
     <div class="container">
       <div class="headerTW">
+        <a href="#" class="logo logo--mobile">
+          <img src="@img/admin/logo/image-1.png" alt="logo">
+        </a>
         <nav class="headerTNav">
+
           <ul>
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Услуги</a></li>
+            <li>
+              <a href="#">Услуги</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Налоговый аудит</a>
+                </li>
+                <li>
+                  <a href="#">Налоговое планирование и сопровождение</a>
+                </li>
+                <li>
+                  <a href="#">Оптимизация налогообложения</a>
+                </li>
+                <li>
+                  <a href="#">Сопровождение налоговых проверок</a>
+                </li>
+                <li>
+                  <a href="#">Налоговые споры и судебные процессы</a>
+                </li>
+              </ul>
+            </li>
             <li><a href="#">О компании</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Вакансии</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
+          <div class="d-lg-flex flex-column gap-15 mb-20">
+            <a class="headerPhone" href="tel:+78432000889">+7 (843) 200-08-89</a>
+            <a class="headerPhone" href="tel:+78432000889">+7 (917) 25 000 55</a>
+          </div>
+          <button class="button button--blue button-sm-w-100 min-w-320 d-lg-flex" data-fancybox data-src="#modalOrder">
+            Получить консультацию
+          </button>
+          <div class="headerContacts d-lg-flex">
+            <img src="@img/icons/place.svg" alt="place">
+            <div class="headerContactsContent">
+              <div class="headerAddress">
+                Казань, ул. Муштари, д.12а, 2 этаж
+              </div>
+              <div class="headerWork">
+                пн-пт: с 8:00 до 17:00
+              </div>
+            </div>
+          </div>
+          <a href="mailto:nalogexpert2016@yandex.ru" class="mail headerNavMail d-lg-flex">
+            <img src="@img/icons/mail.svg" alt="place">
+            nalogexpert2016@yandex.ru
+          </a>
         </nav>
         <div class="headerTR">
-          <a href="mailto:nalogexpert2016@yandex.ru" class="mail">nalogexpert2016@yandex.ru</a>
+          <a href="mailto:nalogexpert2016@yandex.ru" class="mail mail--lg">nalogexpert2016@yandex.ru</a>
           <div class="socials">
             <ul>
-              <li>
-                <a href="#" target="_blank" rel="nofollow">
-                  <img src="@img/admin/socials/tg.svg" alt="icon">
+              <li class="phone-mobile">
+                <a href="tel:+78432000889">
+                  <img src="@img/icons/phone-blue.svg" alt="icon">
                 </a>
               </li>
               <li>
                 <a href="#" target="_blank" rel="nofollow">
-                  <img src="@img/admin/socials/max.svg" alt="icon">
+                  <img class="social-item-lg" src="@img/admin/socials/tg.svg" alt="icon">
+                  <img class="social-item-sm" src="@img/admin/socials/tg-light.svg" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="nofollow">
+                  <img class="social-item-lg" src="@img/admin/socials/max.svg" alt="icon">
+                  <img class="social-item-sm" src="@img/admin/socials/max-light.svg" alt="icon">
                 </a>
               </li>
             </ul>
           </div>
         </div>
+        <div class="hamburger" id="toggle">
+          <div class="top-bun"></div>
+          <div class="meat"></div>
+          <div class="bottom-bun"></div>
+        </div><!-- /Hamburger Menu -->
       </div>
     </div>
   </div>

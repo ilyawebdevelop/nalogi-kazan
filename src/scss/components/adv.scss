@@ -3,6 +3,12 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 20px;
+    row-gap: 20px;
+
+    @media(max-width: 991px) {
+      column-gap: 10px;
+      row-gap: 10px;
+    }
   }
 
   &Item {
@@ -10,5 +16,20 @@
     border: 1px solid #e1e1e8;
     border-radius: 15px;
     padding: 30px;
+
+    @media(max-width: 991px) {
+      grid-column: 6 span;
+      padding: 20px;
+    }
+
+    @media(max-width: 575px) {
+      grid-column: 12 span;
+    }
+
+    h3 {
+      @media(max-width: 1199px) {
+        font-size: 18px;
+      }
+    }
   }
 }

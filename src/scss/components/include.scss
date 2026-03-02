@@ -1,7 +1,13 @@
 .include {
   &Slider {
+    @media(max-width: 575px){
+      overflow: visible;
+    }
     .swiper-slide {
       height: auto;
+    }
+    @media(max-width: 575px){
+      padding-right: 50px;
     }
   }
 }

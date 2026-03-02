@@ -1,7 +1,18 @@
 .about {
+  overflow: hidden;
   &W {
     padding: 70px;
     background-color: var(--bg);
+
+    @media(max-width: 1400px) {
+      padding: 60px;
+    }
+
+    @media(max-width: 575px) {
+      padding: 50px 10px;
+      margin-left: -12px;
+      margin-right: -12px;
+    }
   }
 
   &Grid {
@@ -9,8 +20,21 @@
     grid-template-columns: repeat(12, 1fr);
     column-gap: 50px;
 
+    @media(max-width: 1400px) {
+      column-gap: 40px;
+    }
+
+    @media(max-width: 991px) {
+      row-gap: 10px;
+      column-gap: 0;
+    }
+
     .col {
       grid-column: 6 span;
+
+      @media(max-width: 991px) {
+        grid-column: 12 span;
+      }
     }
   }
 
@@ -19,12 +43,26 @@
     column-gap: 30px;
     margin-bottom: 30px;
 
+    @media(max-width: 1199px) {
+      column-gap: 20px;
+    }
+
+    @media(max-width: 767px) {
+      grid-template-columns: repeat(12, 1fr);
+      display: grid;
+    }
+
     &Item {
+      @media(max-width: 767px) {
+        grid-column: 4 span;
+      }
+
       &:last-child {
         .aboutAdvItemDescr {
           max-width: 172px;
         }
       }
+
       &Count {
         font-family: var(--second-family);
         font-weight: 700;
@@ -32,6 +70,25 @@
         letter-spacing: 0.05em;
         color: #1161b9;
         margin-bottom: 15px;
+
+        @media(max-width: 1400px) {
+          font-size: 50px;
+        }
+
+        @media(max-width: 1199px) {
+          font-size: 40px;
+        }
+
+        @media(max-width: 767px) {
+          margin-bottom: 10px;
+          font-size: 28px;
+        }
+      }
+
+      &Descr {
+        @media(max-width: 767px) {
+          font-size: 12px;
+        }
       }
     }
   }

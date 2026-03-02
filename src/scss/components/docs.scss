@@ -3,6 +3,16 @@
     background: #f7f7fb;
     border-radius: 25px;
     padding: 50px;
+
+    @media(max-width: 767px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @media(max-width: 575px) {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
   }
 }
 
@@ -14,13 +24,44 @@
       width: 100%;
       height: 480px;
       object-fit: contain;
-      background-color: #fff;
       border-radius: 15px;
+
+      @media(max-width: 1599px) {
+        height: 430px;
+      }
+
+      @media(max-width: 767px) {
+        height: 300px;
+      }
+
+      @media(max-width: 575px) {
+        height: 130vw;
+      }
     }
 
     &:hover {
       opacity: .85;
     }
 
+  }
+
+  .swiper-pagination {
+    position: relative;
+    bottom: unset;
+    margin-top: 5px;
+    display: none;
+
+    @media(max-width: 991px) {
+      display: block;
+    }
+
+    &-bullet {
+      opacity: 1;
+      background-color: #E1E1E8;
+
+      &-active {
+        background-color: #1161b9;
+      }
+    }
   }
 }

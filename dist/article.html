@@ -24,33 +24,90 @@
   <div class="headerT">
     <div class="container">
       <div class="headerTW">
+        <a href="#" class="logo logo--mobile">
+          <img src="img/admin/logo/image-1.png" alt="logo">
+        </a>
         <nav class="headerTNav">
+
           <ul>
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Услуги</a></li>
+            <li>
+              <a href="#">Услуги</a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">Налоговый аудит</a>
+                </li>
+                <li>
+                  <a href="#">Налоговое планирование и сопровождение</a>
+                </li>
+                <li>
+                  <a href="#">Оптимизация налогообложения</a>
+                </li>
+                <li>
+                  <a href="#">Сопровождение налоговых проверок</a>
+                </li>
+                <li>
+                  <a href="#">Налоговые споры и судебные процессы</a>
+                </li>
+              </ul>
+            </li>
             <li><a href="#">О компании</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Вакансии</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
+          <div class="d-lg-flex flex-column gap-15 mb-20">
+            <a class="headerPhone" href="tel:+78432000889">+7 (843) 200-08-89</a>
+            <a class="headerPhone" href="tel:+78432000889">+7 (917) 25 000 55</a>
+          </div>
+          <button class="button button--blue button-sm-w-100 min-w-320 d-lg-flex" data-fancybox data-src="#modalOrder">
+            Получить консультацию
+          </button>
+          <div class="headerContacts d-lg-flex">
+            <img src="img/icons/place.svg" alt="place">
+            <div class="headerContactsContent">
+              <div class="headerAddress">
+                Казань, ул. Муштари, д.12а, 2 этаж
+              </div>
+              <div class="headerWork">
+                пн-пт: с 8:00 до 17:00
+              </div>
+            </div>
+          </div>
+          <a href="mailto:nalogexpert2016@yandex.ru" class="mail headerNavMail d-lg-flex">
+            <img src="img/icons/mail.svg" alt="place">
+            nalogexpert2016@yandex.ru
+          </a>
         </nav>
         <div class="headerTR">
-          <a href="mailto:nalogexpert2016@yandex.ru" class="mail">nalogexpert2016@yandex.ru</a>
+          <a href="mailto:nalogexpert2016@yandex.ru" class="mail mail--lg">nalogexpert2016@yandex.ru</a>
           <div class="socials">
             <ul>
-              <li>
-                <a href="#" target="_blank" rel="nofollow">
-                  <img src="img/admin/socials/tg.svg" alt="icon">
+              <li class="phone-mobile">
+                <a href="tel:+78432000889">
+                  <img src="img/icons/phone-blue.svg" alt="icon">
                 </a>
               </li>
               <li>
                 <a href="#" target="_blank" rel="nofollow">
-                  <img src="img/admin/socials/max.svg" alt="icon">
+                  <img class="social-item-lg" src="img/admin/socials/tg.svg" alt="icon">
+                  <img class="social-item-sm" src="img/admin/socials/tg-light.svg" alt="icon">
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="nofollow">
+                  <img class="social-item-lg" src="img/admin/socials/max.svg" alt="icon">
+                  <img class="social-item-sm" src="img/admin/socials/max-light.svg" alt="icon">
                 </a>
               </li>
             </ul>
           </div>
         </div>
+        <div class="hamburger" id="toggle">
+          <div class="top-bun"></div>
+          <div class="meat"></div>
+          <div class="bottom-bun"></div>
+        </div><!-- /Hamburger Menu -->
       </div>
     </div>
   </div>
@@ -102,21 +159,21 @@
   <div class="container">
 
     <div class="breadcrumbs">
-      <div class="container">
-        <div class="aioseo-breadcrumbs">
-          <span class="aioseo-breadcrumb">
-            <a href="/" title="Главная">Главная</a>
-          </span>
-          <span class="aioseo-breadcrumb-separator">/</span>
-          <span class="aioseo-breadcrumb">
-            <a href="#" title="Банк">Контакты</a>
-          </span>
-          <span class="aioseo-breadcrumb-separator">/</span>
-          <span class="aioseo-breadcrumb">
-            Продажа доли в уставном капитале Общества между учредителями — юридическими лицами
-          </span>
-        </div>
+
+      <div class="aioseo-breadcrumbs">
+        <span class="aioseo-breadcrumb">
+          <a href="/" title="Главная">Главная</a>
+        </span>
+        <span class="aioseo-breadcrumb-separator">/</span>
+        <span class="aioseo-breadcrumb">
+          <a href="#" title="Банк">Контакты</a>
+        </span>
+        <span class="aioseo-breadcrumb-separator">/</span>
+        <span class="aioseo-breadcrumb">
+          Продажа доли в уставном капитале Общества между учредителями — юридическими лицами
+        </span>
       </div>
+
     </div>
 
     <h1 class="h1 text-normal">
@@ -138,7 +195,7 @@
   <div class="container">
     <div class="articleSectW">
 
-      <div class="article-content content">
+      <div class="article-content content content-lg-14">
         <p>
           В предыдущей статье мы рассматривали особенности налогообложения сделки по купле – продаже доли в уставном
           капитале хозяйственного общества между физическими лицами. В настоящей статье сместим акцент внимания на
@@ -244,7 +301,7 @@
       <img src="img/admin/team/image-1.jpg" alt="image" class="author-image">
       <div class="authorContent">
         <div class="authorContentL">
-          <h3 class="mb-5">Рунова Юлия</h3>
+          <h3 class="mb-5">Рунова Юлия Евстафьевна</h3>
           <div class="fz-13 color-gray2">
             Руководитель практики
           </div>
@@ -287,7 +344,7 @@
       </a>
       <div class="d-flex flex-column">
         <div class="mb-5 color-white">Казань, ул. Муштари, д.12а, 2 этаж</div>
-        <div class="color-white-50">
+        <div class="color-white-50 text-md-center">
           пн-пт: с 8:00 до 17:00
         </div>
       </div>
@@ -312,9 +369,12 @@
       </div>
     </div>
     <div class="footerC">
-      <div class="col w-200">
+      <div class="footerNavTitle d-md-block text-md-center">
+        Навигация
+      </div>
+      <div class="col w-200 mx-md-auto">
         <nav class="footerNav">
-          <div class="footerNavTitle">
+          <div class="footerNavTitle d-md-none">
             Навигация
           </div>
           <ul>
@@ -336,7 +396,7 @@
           </ul>
         </nav>
       </div>
-      <div class="col w-200">
+      <div class="col w-200 mx-md-auto">
         <nav class="footerNav footerNav--pt">
           <ul>
             <li>
@@ -357,9 +417,12 @@
           </ul>
         </nav>
       </div>
-      <div class="col w-300">
+      <div class="footerNavTitle d-md-block text-md-center">
+        Услуги
+      </div>
+      <div class="col w-300 mx-md-auto">
         <nav class="footerNav">
-          <div class="footerNavTitle">
+          <div class="footerNavTitle d-md-none">
             Услуги
           </div>
           <ul>
@@ -381,7 +444,7 @@
           </ul>
         </nav>
       </div>
-      <div class="col w-300">
+      <div class="col w-300 mx-md-auto">
         <nav class="footerNav footerNav--pt">
           <ul>
             <li>
@@ -397,16 +460,16 @@
           </ul>
         </nav>
       </div>
-      <div class="col w-250">
+      <div class="col w-250 mx-md-auto">
         <nav class="footerNav footerNav--pt">
           <ul>
-            <li class="color-white-50">
+            <li class="color-white-50 text-md-center fz-md-14">
               ООО «Налоговая Экспертиза»
             </li>
-            <li class="color-white-50">
+            <li class="color-white-50 text-md-center fz-md-14">
               ИНН 9999999999
             </li>
-            <li class="color-white-50">
+            <li class="color-white-50 text-md-center fz-md-14">
               ОГРН 11111111111111
             </li>
           </ul>
@@ -415,7 +478,7 @@
     </div>
     <div class="footerB">
       <div class="copyright color-white-50">© ООО «Налоговая Экспертиза», 2026</div>
-      <div class="d-flex gap-70">
+      <div class="d-flex flex-md-column gap-70 gap-md-15">
         <a class="color-white" href="#">Политика конфиденциальности</a>
         <a class="color-white" href="#">Согласие на обработку данных</a>
       </div>
@@ -427,9 +490,14 @@
   </div>
 </footer>
 
+<div class="order-fixed" data-fancybox data-src="#modalOrder">
+  Получить
+  консуль-
+  тацию
+</div>
+
 <script src="https://api-maps.yandex.ru/2.1/?apikey=14e25d2c-415b-4384-89e6-8873e452b565&lang=ru_RU&_v=20250128200343"
   type="text/javascript"></script>
-
 		<!-- modal -->
 <!-- order -->
 <div class="modal" id="modalOrder">
@@ -444,18 +512,18 @@
   </div>
 
   <div class="modalContent">
-    <p class="modalDescr">
+    <p class="modalDescr fz-lg-14">
       Оставьте свои контакты, и мы подготовим персональное предложение
       для вашей компании
     </p>
     <div class="modalForm">
       <div class="inputW mb-10">
-        <input type="text" class="formInput border-outline" placeholder="Как вас зовут?">
+        <input type="text" class="formInput border-outline" placeholder="Ваше имя">
       </div>
-      <div class="inputW mb-50">
-        <input type="tel" class="formInput border-outline" placeholder="+7 (___) ___-__-__" inputmode="text">
+      <div class="inputW mb-50 mb-lg-30">
+        <input type="text" class="formInput border-outline" placeholder="Компания">
       </div>
-      <div class="d-grid grid-column-3 grid-column-sm-2 mb-10 gap-10 socialsForm">
+      <div class="d-grid grid-column-3 mb-10 gap-10 gap-sm-5 socialsForm">
         <div class="col">
           <input id="tel_order_modal" type="radio" name="modalSocials" checked>
           <label for="tel_order_modal">Звонок</label>
@@ -485,7 +553,7 @@
             </label>
           </div>
         </div>
-        <button class="button button--dark-blue orderForm">
+        <button class="button button--dark-blue orderForm button-sm-fz-14 button-sm-h-43 button-sm-w-100">
           Получить консультацию
         </button>
       </div>

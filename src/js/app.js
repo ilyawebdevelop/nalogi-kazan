@@ -73,19 +73,15 @@ var mySwiperInclude = new Swiper(includeSlider, {
   breakpoints: {
     0: {
       slidesPerView: 1,
-      spaceBetween: 10,
     },
     768: {
-      slidesPerView: 2,
-      spaceBetween: 15,
+      slidesPerView: 2,     
     },
     992: {
       slidesPerView: 3,
-      spaceBetween: 15,
     },
     1500: {
       slidesPerView: 4,
-      spaceBetween: 20,
     },
   },
 });
@@ -103,7 +99,33 @@ var mySwiperResult = new Swiper(resultSlider, {
     prevEl: resultSlider?.closest('.sliderW').querySelector('.navArrowPrev'),
     nextEl: resultSlider?.closest('.sliderW').querySelector('.navArrowNext'),
   },
+  pagination: {
+    el: document.querySelector('.resultSlider .swiper-pagination'),
+    clickable: true,
+    type: 'bullets',
+  },
 });
+
+const mediaQueryMax767 = window.matchMedia('(max-width: 767px)');
+
+if (mediaQueryMax767.matches) {
+  // Инициализация слайдера servicesSlider
+  const servicesSlider = document.querySelector('.servicesSlider');
+  var mySwiperServices = new Swiper(servicesSlider, {
+    slidesPerView: 1,
+    speed: 800,
+    spaceBetween: 10,
+    autoHeight: true,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: document.querySelector('.servicesSlider .swiper-pagination'),
+      clickable: true,
+      type: 'bullets',
+    },
+  });
+}
 
 // Инициализация слайдера teamThumbSlider
 const teamSliderThumb = document.querySelector('.teamThumbSlider');
@@ -150,12 +172,17 @@ var mySwiperDoc = new Swiper(docSlider, {
     prevEl: docSlider?.closest('.sliderW').querySelector('.navArrowPrev'),
     nextEl: docSlider?.closest('.sliderW').querySelector('.navArrowNext'),
   },
+  pagination: {
+    el: docSlider?.closest('.sliderW').querySelector('.swiper-pagination'),
+    clickable: true,
+    type: 'bullets',
+  },
   breakpoints: {
     0: {
       slidesPerView: 1,
       spaceBetween: 10,
     },
-    768: {
+    576: {
       slidesPerView: 2,
       spaceBetween: 15,
     },
@@ -252,5 +279,45 @@ if (document.querySelector('.copyBtn')) {
   let reqItemsBtn = document.querySelectorAll('.reqItemBtn');
   reqItemsBtn.forEach(el => {
     let clibEl = new ClipboardJS(el);
+    clibEl.on('success', function (e) {
+      console.info('Action:', e.action);
+      console.info('Text:', e.text);
+      console.info('Trigger:', e.trigger);
+      let parent = e.trigger.closest('li');
+      let copyText = parent.querySelector('.copyTextOfItem');
+      console.log(copyText);
+      copyText.classList.add('active');
+      setTimeout(function () {
+        copyText.classList.remove('active');
+      }, 2000);
+      e.clearSelection();
+    });
   });
 }
+
+// Burger
+const btnMenu = document.querySelector('#toggle');
+const menu = document.querySelector('.headerTNav');
+const bodyEl = document.querySelector('body');
+
+
+const toggleMenu = function () {
+  menu.classList.toggle('active');
+}
+const toggleBurger = function () {
+  btnMenu.classList.toggle('active');
+}
+const bodyOverflow = function () {
+  bodyEl.classList.toggle('hidden');
+}
+
+
+btnMenu?.addEventListener('click', function (e) {
+  e.stopPropagation();
+  toggleMenu();
+  toggleBurger();
+  bodyOverflow();
+  overlayToggle();
+});
+
+

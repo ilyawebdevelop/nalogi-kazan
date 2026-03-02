@@ -13,6 +13,15 @@
     font-size: 24px;
     line-height: normal;
     column-gap: 20px;
+
+    @media(max-width: 991px) {
+      font-size: 18px;
+      padding: 15px;
+      border-radius: 16px;
+      column-gap: 15px;
+      margin-top: 5px;
+    }
+
     &.ui-accordion-header-active {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
@@ -24,11 +33,23 @@
   padding: 30px;
   padding-top: 0;
   background-color: var(--bg);
+
+  @media(max-width: 991px) {
+    padding: 15px;
+    padding-top: 0;
+  }
+
   &.ui-accordion-content-active {
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+
+    @media(max-width: 991px) {
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+    }
   }
 }
+
 .ui-accordion-header-icon {
   width: 44px;
   height: 44px;
@@ -36,7 +57,18 @@
   background: #e1e1e8 url('@img/icons/plus.svg') no-repeat center center / 18px;
   transition: background .2s linear;
   flex-shrink: 0;
+
+  @media(max-width: 991px) {
+    width: 36px;
+    height: 36px;
+    background: #e1e1e8 url('@img/icons/plus.svg') no-repeat center center / 12px;
+  }
 }
+
 .ui-accordion-header-active .ui-accordion-header-icon {
   background: #1161b9 url('@img/icons/minus.svg') no-repeat center center / 18px;
+
+  @media(max-width: 991px) {
+    background: #1161b9 url('@img/icons/minus.svg') no-repeat center center / 12px;
+  }
 }

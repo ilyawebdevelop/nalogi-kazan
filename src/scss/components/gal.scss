@@ -1,9 +1,19 @@
 .gal {
   &Slider {
+    @media(max-width: 575px){
+      padding-right: 50px;
+      overflow: visible;
+      width: 100%;
+    }
     &W {
       display: flex;
       column-gap: 20px;
       align-items: center;
+      .navArrow {
+        @media(max-width: 991px){
+          display: none;
+        }
+      }
     }
   }
   &Slide {
@@ -13,6 +23,13 @@
       object-fit: cover;
       border-radius: 25px;
       transition: opacity .2s linear;
+      @media(max-width: 991px){
+        height: 250px;
+        border-radius: 16px;
+      }
+      @media(max-width: 575px){
+        height: 60vw;
+      }
       &:hover {
         opacity: .85;
       }

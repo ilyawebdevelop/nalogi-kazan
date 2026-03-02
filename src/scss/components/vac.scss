@@ -2,11 +2,6 @@
 
   &List {
     width: 100%;
-    margin-top: 20px;
-
-    @media(max-width: 991px) {
-      margin-top: 0;
-    }
   }
 
   &Wrap {
@@ -22,6 +17,11 @@
     border: 1px solid #e1e1e8;
     border-radius: 25px;
     transition: background .2s linear;
+
+    @media(max-width: 991px) {
+      font-size: 14px;
+      border-radius: 16px;
+    }
 
     &:hover {
       background-color: #f7f7fb;
@@ -49,6 +49,13 @@
       padding: 30px;
       transition: background-color .2s linear;
 
+      @media(max-width: 991px) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
       &Top {
         display: flex;
         align-items: center;
@@ -75,6 +82,11 @@
     &Body {
       padding: 30px;
       padding-top: 0;
+
+      @media(max-width: 991px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
 
     h3 {
@@ -99,9 +111,14 @@
     padding-bottom: 20px;
     border-top: 1px solid #F2F2F6;
 
+    @media(max-width: 991px) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
     @media(max-width: 575px) {
       flex-direction: column;
-      row-gap: 15px;
+      row-gap: 10px;
     }
 
     &Title {
@@ -135,6 +152,10 @@
     padding: 40px;
     width: 560px;
     flex-shrink: 0;
+
+    @media(max-width: 1400px) {
+      width: 450px;
+    }
 
     @media(max-width: 1199px) {
       margin-top: 30px;
@@ -190,11 +211,18 @@
       font-weight: 600;
       font-size: 32px;
       margin-bottom: 15px;
+
+      @media(max-width: 1199px) {
+        font-size: 24px;
+      }
     }
 
     &Descr {
       line-height: 150%;
       margin-bottom: 30px;
+      @media(max-width: 991px){
+        margin-bottom: 20px;
+      }
     }
 
     .vacFormFileInput {
@@ -211,6 +239,12 @@
       align-items: center;
       column-gap: 15px;
       width: 100%;
+
+      @media(max-width: 991px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 14px;
+      }
     }
   }
 }

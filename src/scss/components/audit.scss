@@ -6,8 +6,25 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 50px;
+    @media(max-width: 1400px){
+      column-gap: 30px;
+      padding: 50px;
+    }
+    @media(max-width: 991px){
+      row-gap: 30px;     
+    }
+    @media(max-width: 575px){
+      padding: 50px 10px;
+      column-gap: 0;
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
     .col {
       grid-column: 6 span;
+      @media(max-width: 991px){
+        grid-column: 12 span;
+      }
     }
   }
   &L {
@@ -15,8 +32,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media(max-width: 991px){
+      flex-direction: row;
+      align-items: flex-start;
+      column-gap: 30px;
+    }
   }
   &Icon {
     width: 160px;
+    @media(max-width: 991px){
+      width: 80px;
+    }
+    &--expertiza {
+      width: 175px;
+      @media(max-width: 991px){
+        width: 130px;
+      }
+    }
   }
 }

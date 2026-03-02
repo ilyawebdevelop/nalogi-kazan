@@ -9,6 +9,13 @@
   column-gap: 12px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+
+  @media(max-width: 991px) {
+    font-size: 12px;
+    -webkit-column-gap: 6px;
+    -moz-column-gap: 6px;
+    column-gap: 6px;
+  }
 }
 
 .aioseo-breadcrumbs a {

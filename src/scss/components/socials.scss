@@ -23,8 +23,21 @@
     grid-template-columns: repeat(12, 1fr);
     column-gap: 30px;
 
+    @media(max-width: 991px) {
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+    @media(max-width: 575px){
+      column-gap: 10px;
+      row-gap: 10px;
+    }
+
     li {
       grid-column: 4 span;
+
+      @media(max-width: 575px) {
+        grid-column: 6 span;
+      }
 
       a {
         border: 1px solid var(--outline);
@@ -35,12 +48,21 @@
         padding-top: 8px;
         padding-bottom: 8px;
         transition: background-color .2s linear;
+
+        @media(max-width: 991px) {
+          border-radius: 30px;
+        }
+
         &:hover {
           background-color: #2aabee;
         }
 
         img {
           width: 44px;
+
+          @media(max-width: 991px) {
+            width: 30px;
+          }
         }
       }
     }

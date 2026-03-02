@@ -4,6 +4,9 @@
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
     counter-reset: my-counter;
+    @media(max-width: 767px){
+      gap: 10px;
+    }
   }
 
   &Item {
@@ -13,6 +16,15 @@
     counter-increment: my-counter;
     position: relative;
     overflow: hidden;
+    @media(max-width: 1199px){
+      grid-column: 6 span;
+    }
+    @media(max-width: 767px){
+      padding: 20px;
+    }
+    @media(max-width: 575px){
+      grid-column: 12 span;
+    }
 
     &::before {
       content: counter(my-counter);
@@ -24,11 +36,23 @@
       font-size: 140px;
       color: #1161b9;
       opacity: .1;
+      @media(max-width: 767px){
+        font-size: 100px;
+        bottom: -40px;
+      }
     }
 
     &Title {
       margin-bottom: 15px;
       font-size: 18px;
+      @media(max-width: 1199px){
+        font-size: 16px;
+      }
+    }
+    &Descr {
+      @media(max-width: 1199px){
+        font-size: 14px;
+      }
     }
   }
 }
