@@ -324,6 +324,7 @@ btnMenu?.addEventListener('click', function (e) {
 document.addEventListener('DOMContentLoaded', () => {
   const hero = document.querySelector('main .sect');
   const header = document.querySelector('.headerC');
+  const headerB = document.querySelector('.headerB');
 
   const headerFixed = () => {
     let scrollTop = window.scrollY;
@@ -331,8 +332,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (scrollTop >= heroCenter) {
       header.classList.add('fixed');
+      headerB.classList.add('fixed');
     } else {
       header.classList.remove('fixed');
+      headerB.classList.remove('fixed');
     }
   };
 
