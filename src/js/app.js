@@ -75,7 +75,7 @@ var mySwiperInclude = new Swiper(includeSlider, {
       slidesPerView: 1,
     },
     768: {
-      slidesPerView: 2,     
+      slidesPerView: 2,
     },
     992: {
       slidesPerView: 3,
@@ -321,3 +321,24 @@ btnMenu?.addEventListener('click', function (e) {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const hero = document.querySelector('main .sect');
+  const header = document.querySelector('.headerC');
+
+  const headerFixed = () => {
+    let scrollTop = window.scrollY;
+    let heroCenter = hero.offsetHeight;
+
+    if (scrollTop >= heroCenter) {
+      header.classList.add('fixed');
+    } else {
+      header.classList.remove('fixed');
+    }
+  };
+
+  headerFixed();
+
+  window.addEventListener('scroll', () => {
+    headerFixed();
+  });
+});

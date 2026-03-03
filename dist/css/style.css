@@ -2373,6 +2373,12 @@ section {
   min-height: 100%;
   position: relative;
   background-color: #fff;
+  padding-top: 192px;
+}
+@media (max-width: 991px) {
+  .wrapper {
+    padding-top: 60px;
+  }
 }
 
 .main {
@@ -3184,6 +3190,7 @@ a.color-black:hover {
   padding-right: 9px;
   position: relative;
   display: none;
+  flex-shrink: 0;
 }
 @media (max-width: 991px) {
   .hamburger {
@@ -3323,6 +3330,13 @@ a.color-black:hover {
   display: block;
 }
 
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+}
 .headerT {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -3333,6 +3347,11 @@ a.color-black:hover {
     background-color: #fff;
     padding-top: 10px;
     padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
   }
 }
 .headerTW {
@@ -3425,6 +3444,8 @@ a.color-black:hover {
   padding-top: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--outline);
+  position: sticky;
+  top: 0;
 }
 @media (max-width: 991px) {
   .headerC {
@@ -3449,6 +3470,15 @@ a.color-black:hover {
     align-items: flex-end;
     justify-content: flex-end;
     row-gap: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .headerC.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    transition: all 0.2s linear;
   }
 }
 .headerPhone {

@@ -227,6 +227,10 @@ section {
   min-height: 100%;
   position: relative;
   background-color: #fff;
+  padding-top: 192px;
+  @media(max-width: 991px){
+    padding-top: 60px;
+  }
 
 }
 
